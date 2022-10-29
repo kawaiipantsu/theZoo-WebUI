@@ -24,6 +24,7 @@
 logs/*.log
 reports/*.txt
 .env
+theZoo
 
 # Local OS temp/log/system files
 # -+-
