@@ -17,6 +17,14 @@ Join the community of Kawaiipantsu / THUGS(red) and participate in dev talk or s
 
 ## Table of contents
 
+ - [Requirements](#requirements)
+ - [Installation](#installation)
+   - [Installing Apache+PHP+GIT+Python](#installing-apache-php-git-python)
+   - [Downloading the theZoo and theZoo WebUI](#downloading-the-thezoo-and-thezoo-webui)
+   - [Setting up theZoo](#setting-up-thezoo)
+   - [Done](#done)
+ - [theZoo EULA](#thezoo-eula)
+ - [theZoo and malware database](#thezoo-and-malware-database)
 
 ## Requirements
 
