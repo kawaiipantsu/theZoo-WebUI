@@ -31,7 +31,7 @@ Join the community of Kawaiipantsu / THUGS(red) and participate in dev talk or s
 I've tried to keep it simple, but i do rely on you knowning just a little bit of knowlegde about web servers and how they work. As i won't be covering that part AT ALL! However this is all very straight forward so don't worry.
 
 - OS of choice (Most Linux dists will do)
-- Webserver of choice that can interpered PHP 7.x+
+- Webserver of choice that can interpret PHP 7.x+
 - PHP 7.x+ with following extensions enabled
   - SQLite
   - cURL
