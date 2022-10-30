@@ -311,4 +311,11 @@ table#malwareOverview tr.malwareLine:hover {
     cursor: pointer;
 }
 
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
 
+p {
+  margin: 10px;
+}

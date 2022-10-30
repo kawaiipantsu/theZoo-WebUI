@@ -40,7 +40,9 @@ while ($row = $results->fetchArray()) {
 }
 $page_malwarelist .= "</table>\n";
 
-$page_404 = "Sorry but i could not find that page!";
+$page_404 = "<h3>Ouch, sorry page not found!</h3>".
+            "<p>This project is still very heavily under development, so there will be pages missing :)</p>".
+            "<p>New features are being added all the time, please try again later ...</p>";
 
 
 
@@ -73,6 +75,16 @@ switch($pageShow) {
     if (isset($page_malwarelist) ) $page = $page_malwarelist;
     else $page = $page_404;
     break;
+}
+
+// Crude way to check for theZoo EULA
+// But doing it here to show "more pretty page about it..."
+// Should be done higher up and perhaps "die"...
+if ( checkEULA() === false ) {
+  // We simply overrule the page !!
+  // But mind, anything done above will still be executed/run
+  $page = "<h3>Hi! Even though the zoo is open!</h3>".
+          "<p>You need to accept theZoo EULA!</br>This site won't work until you do so :)</p>";
 }
 
 ?><!doctype html>
