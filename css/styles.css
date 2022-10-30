@@ -71,6 +71,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     overflow-y: scroll; /* Show vertical scrollbar */
+    color: #212324;
 }
 
 .menu {
@@ -191,23 +192,6 @@ body {
   margin: auto;
 }
 
-.menu a {
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #2d3235;
-}
-
-.menu a:hover {
-    text-decoration: none;
-    color: #626464;
-}
-
-.menu a:visited {
-    text-decoration: none;
-}
-
 .menuicon {
     width: 32px;
     height: 32px;
@@ -293,14 +277,38 @@ table#malwareOverview tr.theader th {
     padding-left: 4px;
     text-align: left;
 }
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgb(19, 47, 68);
+}
+
 table#malwareOverview tr.malwareLine:nth-child(odd) {
     background-color: #ffecec;
 }
 table#malwareOverview tr.malwareLine:nth-child(even) {
     background-color: #fff;
 }
+
+.malwareLine td a:link {
+  color: rgb(19, 47, 68);
+}
+
+table#malwareOverview tr.malwareLine:hover a,
 table#malwareOverview tr.malwareLine:hover {
-    background-color: #a8a8a8;
+    background-color: rgb(105, 105, 105);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
+
+.malwareLine td a:hover,
+.malwareLine td a:active {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
 

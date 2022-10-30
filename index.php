@@ -23,23 +23,22 @@ if ( isLocalIP() === false ) {
   }
 }
 
-$page_malwarelist = "<table id=\"malwareOverview\" border=\"0\">" .
-                    " <tr class=\"theader\">" .
-                    "<th>Name</th>" .
-                    "<th>Type</th>" .
-                    "<th>From</th>" .
-                    "</tr>";
+$page_malwarelist = "<table id=\"malwareOverview\" border=\"0\">\n" .
+                    " <tr class=\"theader\">\n" .
+                    "<th>Name</th>\n" .
+                    "<th>Type</th>\n" .
+                    "<th>From</th>\n" .
+                    "</tr>\n";
 $db = new SQLite3(rtrim($cfg["thezoo"],"/")."/conf/maldb.db");
 $results = $db->query('SELECT * FROM Malwares ORDER BY Name COLLATE NOCASE ASC');
 while ($row = $results->fetchArray()) {
-  $page_malwarelist .=  "<tr class=\"malwareLine\">" .
-                        " <td>".htmlentities($row["NAME"])."</td>" .
-                        " <td>".htmlentities($row["TYPE"])."</td>" .
-                        " <td>".htmlentities($row["DATE"])."</td>" .
-                        "</tr>";
+  $page_malwarelist .=  "<tr class=\"malwareLine\" onClick=\"window.location='/?page=malware&id=".intval(trim($row["ID"]))."'\">\n" .
+                        " <td><a href=\"/?page=malware&id=".intval(trim($row["ID"]))."\">".htmlentities($row["NAME"])."</a></td>\n" .
+                        " <td>".htmlentities($row["TYPE"])."</td>\n" .
+                        " <td>".htmlentities($row["DATE"])."</td>\n" .
+                        "</tr>\n";
 }
-$page_malwarelist .= "</table>";
-
+$page_malwarelist .= "</table>\n";
 
 $page_404 = "Sorry but i could not find that page!";
 
@@ -64,6 +63,10 @@ switch($pageShow) {
     break;
   case "about":
     if (isset($page_about) ) $page = $page_about;
+    else $page = $page_404;
+    break;
+  case "malware":
+    if (isset($page_malware) ) $page = $page_malware;
     else $page = $page_404;
     break;
   default:
