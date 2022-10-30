@@ -8,3 +8,32 @@
 ###########################################################################
 # This file is a placeholder for when we
 # want to make things more interresting! (:
+
+## Just make sure the UI experience is not broken by files
+## that are not ment to be viewed in the browser unless handled.
+<FilesMatch "\.(md|cfg|conf)$">
+ Order allow,deny
+ Deny from all
+</FilesMatch>
+
+## Make sure we dont expose some important files
+<FilesMatch "^\.">
+ Order allow,deny
+ Deny from all
+</FilesMatch>
+<FilesMatch "\.inc\.php$">
+ Order allow,deny
+ Deny from all
+</FilesMatch>
+<FilesMatch "audit\.log$">
+ Order allow,deny
+ Deny from all
+</FilesMatch>
+
+## Secure theZoo a bit
+##  Since DirectoryMatch is not allowed from 
+##  htaccess we try other things to lock it down!
+<FilesMatch "\.(db|pass|zip|py|ver|md5|shasum|sha265)$">
+ Order allow,deny
+ Deny from all
+</FilesMatch>

@@ -1,0 +1,306 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.triangle {
+    border-width: 50px;
+    border-style: solid;
+    border-color: red red transparent transparent;
+    position: fixed;
+    top:0;
+    right:0;
+    width:0;
+    height:0;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/background1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll; /* Show vertical scrollbar */
+}
+
+.menu {
+  height: 70px;
+  width: 70px;
+  right: 70px;
+  top: 20px;
+  text-align: center;
+  position: absolute;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  z-index: 999;
+  border: 2px solid #B7DFF3;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.menu.active {
+  width: calc(100% - 140px);
+}
+.menu.active .menuContent * {
+  opacity: 1;
+}
+.menu.active span i:nth-child(1) {
+  transform: rotate(-45deg) translate(-50%, -50%);
+  top: 50%;
+}
+.menu.active span i:nth-child(2) {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.menu.active span i:nth-child(3) {
+  transform: rotate(45deg) translate(-50%, -50%);
+  top: 50%;
+}
+.menu span {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  background: #fff;
+  z-index: 1;
+}
+.menu span i {
+  position: absolute;
+  transform-origin: 50% 50%;
+  width: 45%;
+  height: 2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #cccccc;
+  transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
+}
+.menu span i:nth-child(1) {
+  top: 40%;
+}
+.menu span i:nth-child(2) {
+  top: 50%;
+}
+.menu span i:nth-child(3) {
+  top: 60%;
+}
+.menu .menuContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 70px;
+  right: 0px;
+  text-align: center;
+}
+.menu .menuContent * {
+  opacity: 0;
+}
+.menu .menuContent ul li {
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #2d3235;
+  transition: opacity 0.3s ease 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.menu .menuContent ul li:hover:before {
+  opacity: 0.8;
+  top: 13px;
+  left: 80px;
+}
+.menu .menuContent ul li:hover:after {
+  opacity: 0.8;
+  bottom: 13px;
+  left: -20px;
+}
+.menu .menuContent ul li:before, .menu .menuContent ul li:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #cccccc;
+  transition: all 0.3s ease;
+}
+.menu .menuContent ul li:before {
+  transform: rotate(-55deg);
+  left: 60px;
+  top: -30px;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+}
+.menu .menuContent ul li:after {
+  transform: rotate(-55deg);
+  left: -60px;
+  bottom: -30px;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2d3235;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    color: #626464;
+}
+
+.menu a:visited {
+    text-decoration: none;
+}
+
+.menuicon {
+    width: 32px;
+    height: 32px;
+    margin-top: -5px;
+    vertical-align:middle;
+}
+
+.siteTitle {
+    height: 74px;
+    width: 330px;
+    right: 160px;
+    top: 20px;
+    position: absolute;
+    background: #fff;
+    overflow: hidden;
+    text-align: right;
+    z-index: 999;
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.siteTitle div {
+    margin-top: 8px;
+    margin-right: 10px;
+}
+
+.siteTitle div.line1 {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.siteTitle div.line2 {
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.siteIcon {
+    width: 40px;
+    height: 40px;
+    vertical-align:text-top;
+}
+
+.pageContainer {
+    width: calc(100% - 174px);
+    right: 70px;
+    top: 120px;
+    position: absolute;
+    background: #fff;
+    z-index: 999;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius:2px;
+    padding:20px;
+}
+
+.shadowBorder {
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+table#malwareOverview {
+    width: 100%;
+}
+
+table#malwareOverview td {
+    padding: 4px;
+}
+
+
+table#malwareOverview tr.theader {
+    height: 40px;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #B7DFF3;
+}
+
+table#malwareOverview tr.theader th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    text-align: left;
+}
+table#malwareOverview tr.malwareLine:nth-child(odd) {
+    background-color: #ffecec;
+}
+table#malwareOverview tr.malwareLine:nth-child(even) {
+    background-color: #fff;
+}
+table#malwareOverview tr.malwareLine:hover {
+    background-color: #a8a8a8;
+    cursor: pointer;
+}
+

@@ -17,6 +17,7 @@ Join the community of Kawaiipantsu / THUGS(red) and participate in dev talk or s
 
 ## Table of contents
 
+ - [Disclaimer](#disclaimer)
  - [Requirements](#requirements)
  - [Installation](#installation)
    - [Installing Apache+PHP+GIT+Python](#installing-apache-php-git-python)
@@ -25,6 +26,10 @@ Join the community of Kawaiipantsu / THUGS(red) and participate in dev talk or s
    - [Done](#done)
  - [theZoo EULA](#thezoo-eula)
  - [theZoo and malware database](#thezoo-and-malware-database)
+
+## Disclaimer
+
+This webUI is **NOT** meant to be facing the public internet. There are tons of simple vulnerabilities that would be accessible then. I won't remove them as a bit of insurance so that you don't just make this website public without a bit of hesitation. In case you really need it, consult the `SECURING.md` file. There are steps you could take. Obviously i have included a bit of internal sanity checks but just know that this project WAS NOT MENT TO BE PUBLIC facing on the internet!
 
 ## Requirements
 
